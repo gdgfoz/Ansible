@@ -12,8 +12,8 @@ Minicurso separado em 6 partes apresentando o [Ansible](https://www.ansible.com/
     * Hora: 19:30 (UTC+3)
     * [Link](https://www.youtube.com/watch?v=jGUF9L4t71g)
     * Topicos:
-        * O que é Gerenciamento de Configurações;
-        * O que é o Ansible;
-        * Instalando o Ansible;
-        * Comandos AD-Hoc no Ansible;
-        * Ansible Playbook.
+        * [O que é Gerenciamento de Configurações](/day-1/01.md);
+        * [O que é o Ansible](/day-1/02.md);
+        * [Instalando o Ansible](/day-1/03.md);
+        * [Comandos AD-Hoc no Ansible](/day-1/04.md);
+        * [Ansible Playbook](/day-1/05.md).
