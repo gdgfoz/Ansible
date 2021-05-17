@@ -24,7 +24,7 @@ Minicurso separado em 6 partes apresentando o [Ansible](https://www.ansible.com/
     * Link
     * Topicos:
         * Ansible Galaxy;
-        * Ansible Role;
-        * First Role:
-            * Install Basic Packages;
-            * Setting Up Basic Confs.
+        * Roles Ansible;
+        * Primeira Role:
+            * Instalando Pacotes Básicos;
+            * Setando configurações básicas.
