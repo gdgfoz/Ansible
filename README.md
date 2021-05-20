@@ -21,7 +21,7 @@ Minicurso separado em 6 partes apresentando o [Ansible](https://www.ansible.com/
 * __Day 2:__
     * Dia: 20/05/2021
     * Hora: 19:30 (UTC+3)
-    * [Link](https://www.youtube.com/watch?v=jGUF9L4t71g)
+    * [Link](https://www.youtube.com/watch?v=ik8eP14BKg4)
     * Topicos:
         * [Ansible Galaxy](day-2/01.md);
         * [Ansible Role](day-2/02.md);
