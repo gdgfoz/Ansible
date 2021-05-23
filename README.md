@@ -17,14 +17,24 @@ Minicurso separado em 6 partes apresentando o [Ansible](https://www.ansible.com/
         * [Instalando o Ansible](/day-1/03.md);
         * [Comandos AD-Hoc no Ansible](/day-1/04.md);
         * [Ansible Playbook](/day-1/05.md).
-
+        
 * __Day 2:__
     * Dia: 20/05/2021
     * Hora: 19:30 (UTC+3)
-    * Link
+    * [Link](https://www.youtube.com/watch?v=ik8eP14BKg4)
     * Topicos:
-        * Ansible Galaxy;
-        * Roles Ansible;
-        * Primeira Role:
-            * Instalando Pacotes Básicos;
-            * Setando configurações básicas.
+        * [Ansible Galaxy](day-2/01.md);
+        * [Roles Ansible](day-2/02.md);
+        * [Primeira Role](day-2/03.md):
+            * [Instalando Pacotes Básicos;](day-2/04.md);
+            * [Setando configurações básicas.](day-2/05.md).
+
+* __Day 3:__
+* Dia: 27/05/2021
+    * Hora: 19:30 (UTC+3)
+    * [Link](https://www.youtube.com/)
+    * Topicos:
+        * Files;
+        * Templates
+        * Segunda Role: Instalar Servidor Web;.
+        * Terceira Role: Instalar Servidor de Banco de Dados.
