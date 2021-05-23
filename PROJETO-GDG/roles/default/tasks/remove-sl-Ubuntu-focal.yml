@@ -1,0 +1,4 @@
+- name: Remover SL
+  apt:
+    name: sl
+    state: absent
