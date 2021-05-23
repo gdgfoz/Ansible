@@ -1,0 +1,10 @@
+- hosts: all
+  become: yes
+  user: ubuntu
+  pre_tasks:
+  - name: "Atualizando os Repos"
+    raw: apt update
+  - name: "Instalando o Python"
+    raw: apt install python -y
+  roles:
+  - { role: default, tags: ["default_role"]}

@@ -1,0 +1,15 @@
+- name: Include Vars
+  include_vars: "vars-{{ansible_distribution}}-{{ansible_distribution_release}}.yml"
+
+- name: Atualizando repositórios
+  apt:
+    update_cache: yes
+
+- name: Atualizando os Pacotes
+  apt:
+    upgrade: dist
+
+- name: Install pacotes communs
+  apt:
+    name: "{{ packages }}"
+    state: present
