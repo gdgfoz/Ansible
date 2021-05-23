@@ -30,7 +30,7 @@ Minicurso separado em 6 partes apresentando o [Ansible](https://www.ansible.com/
             * [Setando configurações básicas.](day-2/05.md).
 
 * __Day 3:__
-* Dia: 27/05/2021
+    * Dia: 27/05/2021
     * Hora: 19:30 (UTC+3)
     * [Link](https://www.youtube.com/)
     * Topicos:
