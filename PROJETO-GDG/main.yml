@@ -14,3 +14,9 @@
   user: ubuntu
   roles:
   - { role: web-server, tags: ["web-server_role"]}
+
+- hosts: database
+  become: yes
+  user: ubuntu
+  roles:
+  - { role: db-server, tags: ["db-server_role"]}  
