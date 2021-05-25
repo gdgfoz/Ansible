@@ -1,0 +1,22 @@
+---
+- name: Include Vars
+  include_vars: "vars-{{ansible_distribution}}-{{ansible_distribution_release}}.yml"
+
+- name: Instalando servidor web
+  apt:
+    name: "{{ packages }}"
+    state: present
+
+- name: Criando Vhost
+  template:
+    src: templates/vhost.conf.j2
+    dest: "{{sites_available}}/{{item.id|string}}-{{item.dominio}}.conf"
+  with_items: "{{apps}}"
+
+- name: Ativando Vhost
+  file:
+    src: "{{sites_available}}/{{item.id|string}}-{{item.dominio}}.conf"
+    dest: "{{sites_enabled}}/{{item.id|string}}-{{item.dominio}}.conf"
+    state: "link"
+  with_items: "{{apps}}"
+  notify: Reiniciar Apache2
