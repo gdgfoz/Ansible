@@ -1,0 +1,10 @@
+mysql_cnf: /etc/mysql/mysql.conf.d/mysqld.cnf 
+
+packages:
+- mysql-client-8.0
+- mysql-client-core-8.0
+- mysql-common
+- mysql-server
+- mysql-server-8.0
+- mysql-server-core-8.0 
+- python3-mysqldb

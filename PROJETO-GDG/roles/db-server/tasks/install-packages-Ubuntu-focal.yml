@@ -1,0 +1,28 @@
+---
+- name: Incluindo Váriaveis
+  include_vars: "vars-{{ansible_distribution}}-{{ansible_distribution_release}}.yml"
+
+- name: Instalando servidor de banco de dados
+  apt:
+    name: "{{ packages }}"
+    state: present
+
+- name: Liberando acesso externo MySQL
+  command: sed 's/127.0.0.1/0.0.0.0/g' {{ item }} -i
+  with_items: "{{ mysql_cnf }}"
+  notify: Reiniciando MySQL
+
+- name: Criando bases de dados 
+  mysql_db:
+    name: "{{ item.dbname }}"
+    state: present
+  with_items: "{{ apps }}"
+
+- name: Liberando acesso ao banco de dados
+  mysql_user:
+    name: "{{ item.dbuser }}"
+    password: "{{ item.dbpass }}"
+    host: "{{ item.apphost }}"
+    priv: '{{ item.dbname }}.*:ALL'
+    state: present
+  with_items: "{{ apps }}"

@@ -1,0 +1,3 @@
+---
+# tasks file for db-server
+- include: "install-packages-{{ansible_distribution}}-{{ansible_distribution_release}}.yml"

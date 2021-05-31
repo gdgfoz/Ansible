@@ -5,6 +5,18 @@
   - name: "Atualizando os Repos"
     raw: apt update
   - name: "Instalando o Python"
-    raw: apt install python -y
+    raw: apt install python3 -y
   roles:
   - { role: default, tags: ["default_role"]}
+
+- hosts: web
+  become: yes
+  user: ubuntu
+  roles:
+  - { role: web-server, tags: ["web-server_role"]}
+
+- hosts: database
+  become: yes
+  user: ubuntu
+  roles:
+  - { role: db-server, tags: ["db-server_role"]}  
