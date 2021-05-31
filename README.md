@@ -45,7 +45,7 @@ Minicurso separado em 6 partes apresentando o [Ansible](https://www.ansible.com/
 * __Day 4:__
   * Dia: 03/06/2021
   * Hora: 19:30 (UTC+3)
-  * [Link](https://www.youtube.com/)
+  * [Link](https://www.youtube.com/watch?v=Ma_wcWNV_ak)
   * Topicos:
     * Quarta Role: Deploy da Aplicação;
     * Quinta Role: Configurando DNS.
