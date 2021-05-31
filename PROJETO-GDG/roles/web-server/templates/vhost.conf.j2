@@ -1,9 +1,9 @@
 <VirtualHost *:80>
-    ServerAdmin     {{ item.admin}}
-    ServerName      {{ item.dominio }}
-    ServerAlias     www.{{ item.dominio }}
+    ServerAdmin     {{item.admin}}
+    ServerName      {{item.record}}.{{item.zone}}
+    ServerAlias     www.{{item.record}}.{{item.zone}}
 
-    DocumentRoot /var/www/{{ item.dominio }}
+    DocumentRoot /var/www/{{item.record}}.{{item.zone}}
     <Directory />
         Options FollowSymLinks
     </Directory>
@@ -23,22 +23,22 @@
         Allow from all
     </Directory>
 
-    SetEnv  BD_HOST   {{ item.dbhost }}
-    SetEnv  BD_USER   {{ item.dbuser }}
-    SetEnv  BD_PASS   {{ item.dbpass }}
-    SetEnv  BD_NAME   {{ item.dbname }}
-    SetEnv AUTH_KEY  {{ item.wp_auth_key }}
-    SetEnv SECURE_AUTH_KEY  {{ item.wp_secure_auth_key }}
-    SetEnv LOGGED_IN_KEY  {{ item.wp_logged_in_key }}
-    SetEnv NONCE_KEY  {{ item.wp_nonce_key }}
-    SetEnv AUTH_SALT  {{ item.wp_auth_salt }}
-    SetEnv SECURE_AUTH_SALT {{ item.wp_secure_auth_salt }}
-    SetEnv LOGGED_IN_SALT  {{ item.wp_logged_in_salt }}
-    SetEnv NONCE_SALT  {{ item.wp_nonce_salt }}
+    SetEnv  BD_HOST   {{item.dbhost}}
+    SetEnv  BD_USER   {{item.dbuser}}
+    SetEnv  BD_PASS   {{item.dbpass}}
+    SetEnv  BD_NAME   {{item.dbname}}
+    SetEnv  AUTH_KEY   {{item.wp_auth_key}}
+    SetEnv  SECURE_AUTH_KEY  {{item.wp_secure_auth_key}}
+    SetEnv  LOGGED_IN_KEY  {{item.wp_logged_in_key}}
+    SetEnv  NONCE_KEY  {{item.wp_nonce_key}}
+    SetEnv  AUTH_SALT  {{item.wp_auth_salt}}
+    SetEnv  SECURE_AUTH_SALT {{item.wp_secure_auth_salt}}
+    SetEnv  LOGGED_IN_SALT  {{item.wp_logged_in_salt}}
+    SetEnv  NONCE_SALT  {{item.wp_nonce_salt}}
 
     LogLevel        warn
-    ErrorLog        ${APACHE_LOG_DIR}/{{ item.dominio }}.error.log
+    ErrorLog        ${APACHE_LOG_DIR}/{{item.record}}.{{item.zone}}.error.log
     ErrorLog        ${APACHE_LOG_DIR}/error.log
-    CustomLog       ${APACHE_LOG_DIR}/{{ item.dominio }}.access.log combined
+    CustomLog       ${APACHE_LOG_DIR}/{{item.record}}.{{item.zone}}.access.log combined
     CustomLog       ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
