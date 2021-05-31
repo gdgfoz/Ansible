@@ -41,3 +41,11 @@ Minicurso separado em 6 partes apresentando o [Ansible](https://www.ansible.com/
     * [Templates](/day-3/02.md);
     * [Segunda Role: Instalar Servidor Web](/day-3/03.md);
     * [Terceira Role: Instalar Servidor de Banco de Dados](/day-3/04.md).
+
+* __Day 4:__
+  * Dia: 03/06/2021
+  * Hora: 19:30 (UTC+3)
+  * [Link](https://www.youtube.com/)
+  * Topicos:
+    * Quarta Role: Deploy da Aplicação;
+    * Quinta Role: Configurando DNS.
