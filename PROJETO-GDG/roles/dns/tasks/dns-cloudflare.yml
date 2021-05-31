@@ -1,0 +1,8 @@
+- name: Adicionando registro DNS
+  community.general.cloudflare_dns:
+    zone: "{{item.zone}}"
+    record: "{{item.record}}"
+    type: A
+    value: "{{item.public_ip}}"
+    proxied: yes
+  with_items: "{{apps}}"
