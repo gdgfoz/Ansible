@@ -38,6 +38,6 @@ Minicurso separado em 6 partes apresentando o [Ansible](https://www.ansible.com/
   * [Link](https://www.youtube.com/watch?v=dRY_MPVAXww)
   * Topicos:
     * [Files](/day-3/01.md);
-    * [Templates](/day-3/02.md);;
-    * [Segunda Role: Instalar Servidor Web](/day-3/03.md);;
-    * [Terceira Role: Instalar Servidor de Banco de Dados](/day-3/04.md);.
+    * [Templates](/day-3/02.md);
+    * [Segunda Role: Instalar Servidor Web](/day-3/03.md);
+    * [Terceira Role: Instalar Servidor de Banco de Dados](/day-3/04.md).
