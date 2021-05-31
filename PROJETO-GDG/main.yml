@@ -21,3 +21,7 @@
   user: ubuntu
   roles:
   - { role: db-server, tags: ["db-server_role"]}  
+
+- hosts: local
+  roles:
+  - { role: dns, tags: ["dns_role"]}
