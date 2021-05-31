@@ -1,10 +1,12 @@
 ---
 apps:
   - { id: '0001',
+  zone: diegoneves.eti.br,
+  record: gdg1,
+  public_ip: 123.456.789.001,
   admin: diego@diegoneves.eti.br,
-  dominio: site1.gdg.com.br,
-  apphost: 555.555.555.555,
-  dbhost: 555.555.555.444,
+  apphost: 172.31.0.5,
+  dbhost: 172.31.0.6,
   dbname: gdg-site-1,
   dbuser: sa_gdg-site-1,
   dbpass: bIPf48nUplke34p,
@@ -18,10 +20,12 @@ apps:
   wp_nonce_salt: 529YF370r8gF8NAJ646uwqN1M }
 
   - { id: '0002',
+  zone: diegoneves.eti.br,
+  record: gdg2,
+  public_ip: 123.456.789.001,
   admin: diego@diegoneves.eti.br,
-  dominio: site2.gdg.com.br,
-  apphost: 555.555.555.555,
-  dbhost: 555.555.555.444,
+  apphost: 172.31.0.5,
+  dbhost: 172.31.0.6,
   dbname: gdg-site-2,
   dbuser: sa_gdg-site-2,
   dbpass: Y64X90eVR5g833I,
