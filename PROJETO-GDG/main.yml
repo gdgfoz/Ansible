@@ -14,6 +14,7 @@
   user: ubuntu
   roles:
   - { role: web-server, tags: ["web-server_role"]}
+  - { role: wordpress, tags: ["wordpress_role"]}
 
 - hosts: database
   become: yes
