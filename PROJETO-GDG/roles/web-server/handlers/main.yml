@@ -3,4 +3,4 @@
 - name: Reiniciar Apache2
   service:
     name: apache2
-    state: restarted 
+    state: restarted

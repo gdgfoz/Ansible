@@ -12,6 +12,7 @@ sites_enabled: "{{apachedir}}/sites-enabled"
 packages:
 - apache2
 - libapache2-mod-php
+- mysql-client
 - php-common
 - php7.4-cli
 - php7.4-common
