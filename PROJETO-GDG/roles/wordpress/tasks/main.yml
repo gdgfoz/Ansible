@@ -1,0 +1,3 @@
+---
+# tasks file for wordpress
+- include: "install-wordpress.yml"
