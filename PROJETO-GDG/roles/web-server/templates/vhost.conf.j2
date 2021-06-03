@@ -8,7 +8,7 @@
         Options FollowSymLinks
     </Directory>
 
-    <Directory /var/www/{{ item.dominio }}>
+    <Directory /var/www/{{item.record}}.{{item.zone}}>
         Options Indexes FollowSymLinks MultiViews
         Order allow,deny
         allow from all
