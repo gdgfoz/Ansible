@@ -49,3 +49,12 @@ Minicurso separado em 6 partes apresentando o [Ansible](https://www.ansible.com/
   * Topicos:
     * [Quarta Role: Deploy da Aplicação](/day-4/01.md);
     * [Quinta Role: Configurando DNS](/day-4/02.md).
+
+* __Day 5:__
+  * Dia: 17/06/2021
+  * Hora: 19:30 (UTC+3)
+  * [Link](https://www.youtube.com/watch?v=fEkyqPhtQBg)
+  * Topicos:
+    * [Ansible Local Run](/day--5/01.md)
+    * [Testes de Infra](/day--5/02.md)
+    * [Ansible Galaxy](/day--5/03.md)
