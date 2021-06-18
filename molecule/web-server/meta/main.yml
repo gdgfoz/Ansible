@@ -1,0 +1,17 @@
+galaxy_info:
+  author: Diego Neves
+  description: Uma role simples para instalar o apache2 e php
+  company: GDG Foz do Iguaçu
+  license: MIT
+  min_ansible_version: 2.10.7
+  platforms:
+  - name: Ubuntu
+    versions:
+    - focal
+  galaxy_tags:
+  - "Apache2"
+  - "PHP"
+  - "Molecule"
+  - "GDG"
+
+dependencies: []
