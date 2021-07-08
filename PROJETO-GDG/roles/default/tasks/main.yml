@@ -2,4 +2,3 @@
 # tasks file for default
 - include: "install-packages-{{ansible_distribution}}-{{ansible_distribution_release}}.yml"
 - include: "configure-host-{{ansible_distribution}}-{{ansible_distribution_release}}.yml"
-- include: "remove-sl-{{ansible_distribution}}-{{ansible_distribution_release}}.yml"

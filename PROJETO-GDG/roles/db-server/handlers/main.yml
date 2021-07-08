@@ -2,5 +2,5 @@
 # handlers file for db-server
 - name: Reiniciando MySQL
   service:
-    name: mysql
+    name: "{{ DBSERVERNAME }}"
     state: restarted

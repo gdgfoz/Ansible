@@ -1,0 +1,53 @@
+---
+- name: Include Vars
+  include_vars: "vars-{{ansible_distribution}}-{{ansible_distribution_release}}.yml"
+
+- name: Instalando Epel Repo
+  yum:
+    name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    state: present
+    disable_gpg_check: yes
+
+- name: Instalando Remi Repo
+  yum:
+    name: https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+    state: present
+    disable_gpg_check: yes
+
+- name: Atualizando repositórios
+  yum:
+    name: "*"
+    state: latest
+
+- name: Instalando servidor web
+  yum:
+    name: "{{packages}}"
+    state: present
+
+- name: Habilitando o httpd
+  service:
+    name: httpd
+    state: started
+    enabled: yes
+
+- name: Criando diretório de sites
+  file: 
+    path: "{{sites_available}}"
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Criando Vhost
+  template:
+    src: templates/vhost.conf.j2
+    dest: "{{sites_available}}/{{item.id|string}}-{{item.record}}.{{item.zone}}.conf"
+  with_items: "{{apps}}"
+
+- name: Ativando Vhost
+  file:
+    src: "{{sites_available}}/{{item.id|string}}-{{item.record}}.{{item.zone}}.conf"
+    dest: "{{sites_enabled}}/{{item.id|string}}-{{item.record}}.{{item.zone}}.conf"
+    state: "link"
+  with_items: "{{apps}}"
+  notify: Reiniciar Apache2  

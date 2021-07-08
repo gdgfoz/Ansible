@@ -1,0 +1,32 @@
+apachedir: /etc/httpd
+apachelogdir: /var/log/httpd
+apachedocroot: /var/www
+
+conf_available: "{{apachedir}}/conf-available"
+conf_enabled: "{{apachedir}}/conf"
+mods_available: "{{apachedir}}/mods-available"
+mods_enabled: "{{apachedir}}/conf.modules.d"
+sites_available: "{{apachedir}}/sites-available"
+sites_enabled: "{{apachedir}}/conf.d"
+
+WEBSERVERNAME: httpd
+
+packages:
+- httpd
+- ftp://ftp.pbone.net/mirror/download.fedora.redhat.com/pub/fedora/epel/7/x86_64/Packages/l/libzstd-1.5.0-1.el7.x86_64.rpm
+- mariadb
+- php74-php
+- php74-php-cli
+- php74-php-common
+- php74-php-fpm
+- php74-php-gd
+- php74-php-gmp
+- php74-php-intl
+- php74-php-json
+- php74-php-mbstring
+- php74-php-mysql
+- php74-php-readline
+- php74-php-soap
+- php74-php-xml
+- php74-php-xmlrpc
+- php74-php-zip

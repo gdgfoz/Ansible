@@ -1,0 +1,8 @@
+mysql_cnf: /etc/my.cnf.d/server.cnf
+
+DBSERVERNAME: mariadb-server
+
+packages:
+- mariadb
+- mariadb-server
+- MySQL-python
