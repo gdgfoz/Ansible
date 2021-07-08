@@ -1,24 +1,38 @@
 - hosts: all:!local
   become: yes
-  user: ubuntu
   pre_tasks:
+
   - name: "Atualizando os Repos"
     raw: apt update
+    when:
+    - ansible_distribution == "Ubuntu"
+
   - name: "Instalando o Python"
     raw: apt install python3 -y
+    when:
+    - ansible_distribution == "Ubuntu"
+
+  - name: "Atualizando os Repos"
+    raw: yum update -y
+    when:
+    - ansible_distribution == "Amazon"
+
+  - name: "Instalando o Python"
+    raw: yum install python3 -y
+    when:
+    - ansible_distribution == "Amazon"
+
   roles:
   - { role: default, tags: ["default_role"]}
 
 - hosts: web
   become: yes
-  user: ubuntu
   roles:
   - { role: web-server, tags: ["web-server_role"]}
   - { role: wordpress, tags: ["wordpress_role"]}
 
 - hosts: database
   become: yes
-  user: ubuntu
   roles:
   - { role: db-server, tags: ["db-server_role"]}  
 

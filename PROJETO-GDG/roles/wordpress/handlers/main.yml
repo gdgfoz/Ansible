@@ -2,5 +2,5 @@
 # handlers file for wordpress
 - name: Reiniciar Apache2
   service:
-    name: apache2
+    name: "{{ WEBSERVERNAME }}"
     state: restarted 

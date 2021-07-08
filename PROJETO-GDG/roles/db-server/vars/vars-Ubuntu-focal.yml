@@ -1,5 +1,7 @@
 mysql_cnf: /etc/mysql/mysql.conf.d/mysqld.cnf 
 
+DBSERVERNAME: mysql
+
 packages:
 - mysql-client-8.0
 - mysql-client-core-8.0

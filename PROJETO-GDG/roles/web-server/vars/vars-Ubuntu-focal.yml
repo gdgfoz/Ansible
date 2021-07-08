@@ -9,6 +9,8 @@ mods_enabled: "{{apachedir}}/mods-enabled"
 sites_available: "{{apachedir}}/sites-available"
 sites_enabled: "{{apachedir}}/sites-enabled"
 
+WEBSERVERNAME: apache2
+
 packages:
 - apache2
 - libapache2-mod-php

@@ -1,0 +1,34 @@
+- name: Incluindo Váriaveis
+  include_vars: "vars-{{ansible_distribution}}-{{ansible_distribution_release}}.yml"
+
+- name: Instalando servidor de banco de dados
+  yum:
+    name: "{{ packages }}"
+    state: present
+
+- name: Habilitando o MariaDB
+  service:
+    name: mariadb
+    state: started
+    enabled: yes
+
+- name: Adicionando a instancia criada no .ssh/config
+  lineinfile:
+    dest: "{{ mysql_cnf }}"
+    insertafter: "[mysqld]" 
+    line: "bind-address = 0.0.0.0"
+
+- name: Criando bases de dados 
+  mysql_db:
+    name: "{{ item.dbname }}"
+    state: present
+  with_items: "{{ apps }}"
+
+- name: Liberando acesso ao banco de dados
+  mysql_user:
+    name: "{{ item.dbuser }}"
+    password: "{{ item.dbpass }}"
+    host: "{{ item.apphost }}"
+    priv: '{{ item.dbname }}.*:ALL'
+    state: present
+  with_items: "{{ apps }}"
